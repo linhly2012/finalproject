@@ -10,14 +10,16 @@
 
   <!-- // <script src="Download the uncompressed, development jQuery 2.1.4"></script> -->
 
-  <!-- //insert css
-  //insert js  -->
 </head>
 
 <body>
+  <!-- Divided out another head in body for the log out purpose-->
+  <header>
+    <h1>  P E A R . </h1>  <h1 id='signout'><a href="{{ signout_url }}">Log Out</a></h1>
+  </header>
 
-  <h1>  P E A R . </h1>
-
+  <!--Welcome pic, information what is the website
+  and about us as a developers -->
   <div id="scrollsections">
     <section id="scrollsec1">
       <img id= "scrollsec1pic" src="style/2015-07-27.jpg">
@@ -34,49 +36,27 @@ A second common modern English style is to use no indenting, but add vertical wh
 
 A second common modern English style is to use no indenting, but add vertical whitespace to create "block paragraphs." On a typewriter, a double carriage return produces a blank line for this purpose; professional typesetters (or word processing software) may put in an arbitrary vertical space by adjusting leading. This style is very common in electronic formats, such as on the World Wide Web and email.<h2>
     </section>
-
-    <!-- <img src="paris_city_lights-wallpaper-2560x1600.jpg"> -->
   </div>
 
+<!--Scroll Bar Menu for the home, log in, your thoughts and word page-->
+  <div id="menu">
+    <section id="sec1">
+      <a href="/"><font color="white">Home</font></a>
+    </section>
 
+    <section id="sec2">
+      <a href="word_page.html"><font color="white">Word</font></a>
+    </section>
 
+    <section id="sec3">
+      <a href="/survey"><font color="white">Your <br/> Thoughts </a>
+    </section>
 
-
-<!--Scroll Bar Menu-->
-<div id="menu">
-  <section id="sec1">
-    <a href="/"><font color="white">Home</font></a>
-  <!-- <img src="large.jpg"> -->
-  </section>
-
-  <section id="sec2">
-    <a href="word_page.html"><font color="white">Word</font></a>
-<!-- <img src="paris_19-wallpaper-1680x1050.jpg" width="40%"> -->
-  </section>
-
-
-  <section id="sec3">
-    <a href="/survey"><font color="white">Your <br/> Thoughts </a>
-<!-- <img src="paris_city_lights-wallpaper-2560x1600.jpg" width="40%"> -->
-  </section>
-
-  <section id="sec4">
-
-  <!-- <a href="{{ login_url }}">Login</a> -->
-  <a href="{{ login_url }}" >Login</a>
-
-<!-- <img src="338338-galaxy-hd-wallpaper.jpg" width=40%> -->
-  </section>
-
-</div>
-
-
-<!--testing the scroll -->
-
-
-
-
-
+    <section id="sec4">
+      <a href="{{ login_url }}" ><font color="white">Login</font></a>
+      
+    </section>
+  </div>
 
 </body>
 </html>

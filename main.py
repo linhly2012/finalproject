@@ -25,36 +25,32 @@ from google.appengine.ext import ndb
 import logging
 import datetime
 
-# Handler for comment
-# /login -> allow user to log in
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        entry = jinja2_environment.get_template('template/loginpage.html')
-        self.response.write(entry.render())
-        user = users.get_current_user()
-        if user:
-            greeting = ('Welcome, %s! (<a href= %s>Sign Out</a>)' % (user.nickname(),
-            users.create_logout_url('/')))
-                        #^ send user back to the original page after they log out
-        else:
-            greeting = ('<a href= "%s"> Sign in or Register </a>.' % users.create_login_url
-            ('/'))
-        self.response.write('<html><body>%s</body></html>' % greeting)
-
-# welcome page Handler
-# its work
-
 #associated with surveyhandler
 class User(ndb.Model):
         username = ndb.StringProperty(required=True)
         useful= ndb.StringProperty(required=True)
         created_date = ndb.DateTimeProperty(required=True)
 
+
+#allow user to go to do log out in a more convenient way
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user() #getting current user
+        useracc = users.create_logout_url('/') #variable for user to sign out
+        template_vars={'signout_url' : useracc} #library to store all the variable
+        entry = jinja2_environment.get_template('template/welcome.html')
+        self.response.write(entry.render(template_vars))
+        self.response.write('<html><body>%s</body></html>')
+
+#allow user to log in then redirect them straight to home page (aka welcome page)
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        # entry_vars = {'login_url': login_url, 'user': user}
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render(login_url=users.create_login_url('/login')))
 
+#allow user to take survey when they choose your thoughts
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
         # self.response.write('hello world')
@@ -76,6 +72,7 @@ class SurveyHandler(webapp2.RequestHandler):
         entry = jinja2_environment.get_template('template/yourthoughts.html')
         self.response.write(entry.render(template_vars))
 
+#store user data from the survey
 class UserDataHandler(webapp2.RequestHandler):
     def get(self):
         query = Survey.query()
@@ -85,11 +82,7 @@ class UserDataHandler(webapp2.RequestHandler):
             'templates/yourthoughts.html')
         self.response.write(template.render(template_vars))
 
-# class AddUserHandler(webapp2.RequestHandler):
-#     def get(self):
-#         template = jinja_environment.get_template("templates/add_student.html")
-#         self.response.write(template.render())
-
+#handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja2_environment.get_template('template/nodes.html')

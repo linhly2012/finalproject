@@ -7,6 +7,10 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 
+#signout{   /*style the sign out function*/
+  position: absolute;
+  right: 60px;
+}
 /*scroll menu*/
 /*#scrollsections {
     width: 85%;
@@ -81,4 +85,9 @@ body{
   overflow: scroll;
   float: right;
   padding-right: 5%;
+}
+
+
+a:link{
+  text-decoration: none;
 }

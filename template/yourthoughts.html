@@ -14,8 +14,10 @@
 </head>
 
 <body>
-  <h1> Pear. </h1>
-
+  <!-- Divided out another head in body for the log out purpose-->
+  <header>
+    <h1>  P E A R . </h1>  <h1 id='signout'><a href="{{ signout_url }}">Log Out</a></h1>
+  </header>
 
   <form id="survey"action="/survey" method="POST">
     <br/>
@@ -30,10 +32,6 @@
         {% endif %}
       </div>
     </div>
-  </form>
-    <div>What is your name?<br/> <input type="text" name="username"/></div>
-    <div>Did you reach your brainstorming goal? <br/><input type="text" name="useful"/></div>
-    <div id="submitbutton"><input type="submit" value="Submit"/></div>
   </form>
 <!--Scroll Bar Menu-->
 <div id="menu">
@@ -50,7 +48,7 @@
   </section>
 
   <section id="sec4">
-  <a href="/login">Login</a>
+  <a href="/login"><font color="white">Login</font></a>
   </section>
 
 </div>
