@@ -1,0 +1,115 @@
+#title {
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: auto;
+
+}
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*scroll menu*/
+#scrollsections {
+    width: 85%;
+    height: 800px;
+    overflow: scroll;
+    float: right;
+    display: inline-block;
+}
+#scrollsec1 {
+  /*background-color: blue;*/
+  overflow: auto;
+
+}
+
+#scrollsec2 {
+  background-color: rgba(192,192,192,0.3);
+  overflow: auto;
+}
+
+#scrollsec3 {
+  background-color: rgba(255,0,0,0.3);
+  overflow: auto;
+}
+
+
+#scrollsec1pic {
+  width: 100%;
+  height: 800px;
+}
+
+
+
+
+#sec1 {
+  background-image: url('sec1pic.jpg');
+  color: white;
+  overflow: auto;
+  width: 15%;
+  font-size: 3em;
+  text-align: center;
+  height: 200px;
+}
+
+#sec2 {
+  background-image: url('sec2pic.jpg');
+  overflow: auto;
+  width: 15%;
+  font-size: 3em;
+  text-align: center;
+  height: 200px;
+
+}
+
+#sec3 {
+  background-image: url('sec3pic.jpg');
+  width: 15%;
+  color: white;
+  overflow: auto;
+  font-size: 3em;
+  text-align: center;
+  height: 200px;
+
+}
+
+#sec4 {
+  background-image: url('sec4pic.jpg');
+  font-size: 3em;
+  width: 15%;
+  overflow: auto;
+  text-align: center;
+  height: 200px;
+}
+
+#scroll {
+  resize: auto;
+  width: 80%;
+  height: 800px;
+  overflow: scroll;
+  float: right;
+  padding-right: 5%;
+}
+
+#survey {
+  background-image: url('yourthoughtspic.jpg');
+  width: 85%;
+  height: 800px;
+  overflow: scroll;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+
+}
+
+#submitbutton {
+  width: 8em; height: 4em;
+  border-radius: 25px;
+  background-color: pink;
+  font-size: .5em;
+}
+
+
+/*a:link {
+    color: #FF0000;
+}*/

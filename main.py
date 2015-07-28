@@ -49,9 +49,17 @@ class HomePageHandler(webapp2.RequestHandler):
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render())
 
+class SurveyHandler(webapp2.RequestHandler):
+    def get(self):
+        entry = jinja2_environment.get_template('template/yourthoughts.html')
+        self.response.write(entry.render())
+
+
+
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
-    ('/login', MainHandler)
+    ('/login', MainHandler),
+    ('/survey', SurveyHandler),
 ], debug=True)
