@@ -94,22 +94,23 @@ class NodeHandler(webapp2.RequestHandler):
     def get(self):
 
 
-        #url = ("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&includePartOfSpeech=noun&minCorpusCount=5000&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")
-        #yellow = urllib2.urlopen(url).read()
-        #json.loads(string) returns a dictionary
-        #logging.info(yellow)
-        #bigdictionary = json.loads(yellow)
+        url = ("http://randomword.setgetgo.com/get.php")
+        string = urllib2.urlopen(url).read()
+        # json.loads(string) returns a dictionary
+        logging.info(">>>>>>>>>>" + string)
+        word = string
+        #bigdictionary = string
 
 
         #word = bigdictionary['word']
-        #print (word)
+        print (word)
         # temp = Temperature(temperature = int(howhot), created = datetime.datetime.now(),
         #     latitude = float(lat), longitude = float(lon))
         # temp.put()
 
-        #template_vars = {'word' : word}
+        template_vars = {'word' : word}
         template = jinja2_environment.get_template('template/nodes.html')
-        self.response.write(template.render())
+        self.response.write(template.render(template_vars))
 
 
         # set up tempalte_vars dictionary from html {{}}
