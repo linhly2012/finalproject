@@ -109,7 +109,10 @@ body{
   font-size: .5em;
 }
 
-
+#thank{
+  text-align: center;
+  color: white;
+}
 /*a:link {
     color: #FF0000;
 }*/

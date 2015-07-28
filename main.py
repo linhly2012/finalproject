@@ -68,11 +68,11 @@ class SurveyHandler(webapp2.RequestHandler):
         username1.created_date = current_date
 
         username1.put()
-        self.response.write('Thank you!')
         # self.response.write('<a href=/add_name>Record User</a>')
 
+        template_vars={'username' : username}
         entry = jinja2_environment.get_template('template/yourthoughts.html')
-        self.response.write(entry.render())
+        self.response.write(entry.render(template_vars))
 
 class UserDataHandler(webapp2.RequestHandler):
     def get(self):
@@ -99,7 +99,7 @@ app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/login', MainHandler),
     ('/survey', SurveyHandler),
-    ('/nodes', NodeHandler)
+    ('/nodes', NodeHandler),
     ('/survey', SurveyHandler),
     ('/nodes', NodeHandler)
 ], debug=True)

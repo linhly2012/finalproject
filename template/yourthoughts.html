@@ -21,49 +21,35 @@
     <br/>
     <br/>
     <br/>
-    <div>What is your name? <br/> <input type="text" name="name"/></div>
+    <div>What is your name? <br/> <input type="text" name="username"/></div>
     <div>Did you reach your brainstorming goal? <br/><input type="text" name="useful"/></div>
-    <div><input type="submit" value="Submit"/></div>
+    <div><input type="submit" value="Submit"/>
+      <div id="thank">
+        {% if username %}
+            Thank you, {{ username }}
+        {% endif %}
+      </div>
+    </div>
   </form>
-
-
-
-
-
-
 <!--Scroll Bar Menu-->
 <div id="menu">
   <section id="sec1">
     <a href="/"><font color="white">Home</font></a>
-  <!-- <img src="large.jpg"> -->
   </section>
 
   <section id="sec2">
     <a href="word_page.html"><font color="white">Word</font></a>
-<!-- <img src="paris_19-wallpaper-1680x1050.jpg" width="40%"> -->
   </section>
-
 
   <section id="sec3">
       <a href="/survey"><font color="white">Your <br/> Thoughts</font></a>
-<!-- <img src="paris_city_lights-wallpaper-2560x1600.jpg" width="40%"> -->
   </section>
 
   <section id="sec4">
-
   <a href="/login">Login</a>
-<!-- <img src="338338-galaxy-hd-wallpaper.jpg" width=40%> -->
   </section>
 
 </div>
-
-
 <!--testing the scroll -->
-
-
-
-
-
-
 </body>
 </html>
