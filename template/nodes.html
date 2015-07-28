@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <link type = "text/css" rel = "stylesheet" href = "http://visjs.org/dist/vis.css">
+    <link type = "text/css" rel = "stylesheet" href = "http://visjs.org/dist/vis.min.css">
+    <script type = "text/javascript" src = "http://visjs.org/dist/vis.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type = "text/javascript" src ="scripts/forms.js"></script>
+    <script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  </head>
+  <body>
+
+    <div id="mynetwork"></div>
+Hello
+<script type="text/javascript" src = "http://visjs.org/dist/vis.js">
+    // create an array with nodes
+
+    console.log("Working");
+
+    var nodes = new vis.DataSet([
+        {id: 1, label: 'Node 1'},
+        {id: 2, label: 'Node 2'},
+        {id: 3, label: 'Node 3'},
+        {id: 4, label: 'Node 4'},
+        {id: 5, label: 'Node 5'},
+        {id: 6, label: 'Node 6'},
+        {id: 7, label: 'Node 7'},
+        {id: 8, label: 'Node 8'},
+    ]);
+    // create an array with edges
+    var edges = new vis.DataSet([
+        {from: 1, to: 2},
+        {from: 2, to: 3},
+        {from: 3, to: 4},
+        {from: 4, to: 5},
+        {from: 5, to: 6},
+        {from: 6, to: 7},
+        {from: 7, to: 8},
+    ]);
+
+    // create a network
+    var container = document.getElementById('mynetwork');
+
+    // provide the data in the vis format
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var options = {};
+
+    // initialize your network!
+    var network = new vis.Network(container, data, options);
+</script>
+
+    <center>
+
+    <h1>Calculator</h1>
+    <p></p>
+
+
+  <div>
+
+  </div>
+  </center>
+  </body>
+
+</html>

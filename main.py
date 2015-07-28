@@ -49,9 +49,16 @@ class HomePageHandler(webapp2.RequestHandler):
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render())
 
+class NodeHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja2_environment.get_template('template/nodes.html')
+        self.response.write(template.render())
+
+
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
-    ('/login', MainHandler)
+    ('/login', MainHandler),
+    ('/nodes', NodeHandler)
 ], debug=True)

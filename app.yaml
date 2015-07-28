@@ -9,8 +9,14 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /welcomepage_resources
-  static_dir: welcomepage_resources
+- url: /scripts
+  static_dir: scripts
+
+- url: /style
+  static_dir: style
+
+# - url: /welcomepage_resources
+#   static_dir: welcomepage_resources
 
 - url: /word_page
   static_dir: word_page
