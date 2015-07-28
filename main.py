@@ -43,8 +43,10 @@ class MainHandler(webapp2.RequestHandler):
 
 # welcome page Handler
 # its work
+
+#associated with surveyhandler
 class User(ndb.Model):
-        name = ndb.StringProperty(required=True)
+        username = ndb.StringProperty(required=True)
         useful= ndb.StringProperty(required=True)
         created_date = ndb.DateTimeProperty(required=True)
 
@@ -64,7 +66,7 @@ class SurveyHandler(webapp2.RequestHandler):
         username = self.request.get('username')
         useful = self.request.get('useful')
         current_date = datetime.datetime.now()
-        username1 = User (name=username, useful=useful)
+        username1 = User (username=username, useful=useful)
         username1.created_date = current_date
 
         username1.put()
