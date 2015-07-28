@@ -3,7 +3,7 @@
 
 <head>
   <title> Pear </title>
-  <link rel="stylesheet" type="text/css" href="welcomepage_resources/yourthoughts.css">
+  <link rel="stylesheet" type="text/css" href="/style/yourthoughts.css">
   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <!-- // <script src="/welcomepage_resources/welcomepage.js"></script> -->
 
@@ -16,21 +16,14 @@
 <body>
   <h1> Pear. </h1>
 
-  <form id="survey" action="/survey" method="POST">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h1><font color="white">Did you <br/>achieve your<br/> brainstorming <br/>goal?</font></h1>
-  <input type="radio" name="yesno" value="yes" checked>Yes
-  <br>
-  <input type="radio" name="yesno" value="no">No
-  <br/>
-  <br/>
-  <button id="submitbutton" type="submit" form="form1" value="Submit">Submit</button>
-  <br/>
-  <br/>
+
+  <form id="survey"action="/survey" method="POST">
+    <div>Name: <input type="text" name="name"/></div>
+    <div>Useful: <input type="text" name="useful"/></div>
+    <div><input type="submit" value="Submit"/></div>
   </form>
+
+
 
 
 

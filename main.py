@@ -44,23 +44,60 @@ class MainHandler(webapp2.RequestHandler):
 
 # welcome page Handler
 # its work
+class User(ndb.Model):
+        name = ndb.StringProperty(required=True)
+        useful= ndb.StringProperty(required=True)
+        created_date = ndb.DateTimeProperty(required=True)
+
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render())
 
-<<<<<<< HEAD
+
+# <<<<<<< HEAD
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
+        # self.response.write('hello world')
+        template = jinja2_environment.get_template("template/yourthoughts.html")
+        self.response.write(template.render())
+
+
+    def post(self):
+        username = self.request.get('username')
+        useful = self.request.get('useful')
+        current_date = datetime.datetime.now()
+        username1 = User (name=username, useful=useful)
+        username1.created_date = current_date
+
+        username1.put()
+        self.response.write('Thank you!')
+        # self.response.write('<a href=/add_name>Record User</a>')
+
         entry = jinja2_environment.get_template('template/yourthoughts.html')
         self.response.write(entry.render())
 
-=======
+class UserDataHandler(webapp2.RequestHandler):
+    def get(self):
+        query = Survey.query()
+        user_data = query.fetch()
+        template_vars = {'username':user_data}
+        template = jinja_environment.get_template(
+            'templates/yourthoughts.html')
+        self.response.write(template.render(template_vars))
+
+# class AddUserHandler(webapp2.RequestHandler):
+#     def get(self):
+#         template = jinja_environment.get_template("templates/add_student.html")
+#         self.response.write(template.render())
+
+
+# =======
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja2_environment.get_template('template/nodes.html')
         self.response.write(template.render())
->>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
+# >>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
 
 
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -68,9 +105,9 @@ jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.d
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/login', MainHandler),
-<<<<<<< HEAD
+# <<<<<<< HEAD
     ('/survey', SurveyHandler),
-=======
+# =======
     ('/nodes', NodeHandler)
->>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
+# >>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
 ], debug=True)
