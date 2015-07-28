@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     console.log("Working");
 
     var nodes = new vis.DataSet([
@@ -23,6 +24,8 @@ $(document).ready(function() {
         {from: 7, to: 8},
     ]);
 
+
+
     // create a network
     var container = document.getElementById('mynetwork');
 
@@ -35,5 +38,41 @@ $(document).ready(function() {
 
     // initialize your network!
     var network = new vis.Network(container, data, options);
+    console.log("Editing Network");
+
+    jQuery('body').hover(function() {
+      //$('').clone({left:'0px'}, 1500, 'easeInElastic', function() {
+      // console.log("Adding node");
+      // nodes.push({id: 12, label : 'Node Test'})
+      // console.log(String(nodes));
+        var add = {
+          manipulation: {
+            addNode: function(nodeData,callback) {
+              nodeData.label = 'Create a new node';
+              callback(nodeData);
+            }
+          }
+        }
+        //getNodes.push({id : 12, label : "Test Node"})
+        //edges.push({from: 8, to: 12})
+        console.log("Creating a node 2");
+
+        container = document.getElementById('mynetwork');
+
+        // provide the data in the vis format
+        data = {
+            nodes: nodes,
+            edges: edges
+        };
+        network.container = container;
+        network.data = data;
+        network.options = add;
+
+      });
+
+      function getNodes() {
+        return nodes;
+      }
 
 })
+// });

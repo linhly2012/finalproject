@@ -85,8 +85,31 @@ class UserDataHandler(webapp2.RequestHandler):
 #handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
+
+
+        url = ("http://randomword.setgetgo.com/get.php")
+        string = urllib2.urlopen(url).read()
+        # json.loads(string) returns a dictionary
+        logging.info(">>>>>>>>>>" + string)
+        word = string
+        #bigdictionary = string
+
+
+        #word = bigdictionary['word']
+        print (word)
+        # temp = Temperature(temperature = int(howhot), created = datetime.datetime.now(),
+        #     latitude = float(lat), longitude = float(lon))
+        # temp.put()
+
+        template_vars = {'word' : word}
         template = jinja2_environment.get_template('template/nodes.html')
-        self.response.write(template.render())
+        self.response.write(template.render(template_vars))
+
+
+        # set up tempalte_vars dictionary from html {{}}
+        # template_vars = {'temperature' : howhot, 'form': form}
+        # self.response.write(template.render(template_vars))
+
 
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
