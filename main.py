@@ -31,12 +31,11 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/loginpage.html')
         self.response.write(entry.render())
-
         user = users.get_current_user()
         if user:
-                greeting = ('Welcome, %s! (<a href= %s> sign out</a>)' % (user.nickname(),
-                users.create_logout_url('/')))
-                            #^ send user back toc the original page after they log out
+            greeting = ('Welcome, %s! (<a href= %s>Sign Out</a>)' % (user.nickname(),
+            users.create_logout_url('/')))
+                        #^ send user back to the original page after they log out
         else:
             greeting = ('<a href= "%s"> Sign in or Register </a>.' % users.create_login_url
             ('/'))
@@ -44,10 +43,52 @@ class MainHandler(webapp2.RequestHandler):
 
 # welcome page Handler
 # its work
+
+#associated with surveyhandler
+class User(ndb.Model):
+        username = ndb.StringProperty(required=True)
+        useful= ndb.StringProperty(required=True)
+        created_date = ndb.DateTimeProperty(required=True)
+
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/welcome.html')
-        self.response.write(entry.render())
+        self.response.write(entry.render(login_url=users.create_login_url('/login')))
+
+class SurveyHandler(webapp2.RequestHandler):
+    def get(self):
+        # self.response.write('hello world')
+        template = jinja2_environment.get_template("template/yourthoughts.html")
+        self.response.write(template.render())
+
+
+    def post(self):
+        username = self.request.get('username')
+        useful = self.request.get('useful')
+        current_date = datetime.datetime.now()
+        username1 = User (username=username, useful=useful)
+        username1.created_date = current_date
+
+        username1.put()
+        # self.response.write('<a href=/add_name>Record User</a>')
+
+        template_vars={'username' : username}
+        entry = jinja2_environment.get_template('template/yourthoughts.html')
+        self.response.write(entry.render(template_vars))
+
+class UserDataHandler(webapp2.RequestHandler):
+    def get(self):
+        query = Survey.query()
+        user_data = query.fetch()
+        template_vars = {'username':user_data}
+        template = jinja_environment.get_template(
+            'templates/yourthoughts.html')
+        self.response.write(template.render(template_vars))
+
+# class AddUserHandler(webapp2.RequestHandler):
+#     def get(self):
+#         template = jinja_environment.get_template("templates/add_student.html")
+#         self.response.write(template.render())
 
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
@@ -80,5 +121,8 @@ jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.d
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/login', MainHandler),
+    ('/survey', SurveyHandler),
+    ('/nodes', NodeHandler),
+    ('/survey', SurveyHandler),
     ('/nodes', NodeHandler)
 ], debug=True)

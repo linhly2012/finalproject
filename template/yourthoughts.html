@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Pear </title>
+  <link rel="stylesheet" type="text/css" href="/style/yourthoughts.css">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <!-- // <script src="/welcomepage_resources/welcomepage.js"></script> -->
+
+  <!-- // <script src="Download the uncompressed, development jQuery 2.1.4"></script> -->
+
+  <!-- //insert css
+  //insert js  -->
+</head>
+
+<body>
+  <h1> Pear. </h1>
+
+
+  <form id="survey"action="/survey" method="POST">
+    <br/>
+    <br/>
+    <br/>
+    <div>What is your name? <br/> <input type="text" name="username"/></div>
+    <div>Did you reach your brainstorming goal? <br/><input type="text" name="useful"/></div>
+    <div><input type="submit" value="Submit"/>
+      <div id="thank">
+        {% if username %}
+            Thank you, {{ username }}
+        {% endif %}
+      </div>
+    </div>
+  </form>
+    <div>What is your name?<br/> <input type="text" name="username"/></div>
+    <div>Did you reach your brainstorming goal? <br/><input type="text" name="useful"/></div>
+    <div id="submitbutton"><input type="submit" value="Submit"/></div>
+  </form>
+<!--Scroll Bar Menu-->
+<div id="menu">
+  <section id="sec1">
+    <a href="/"><font color="white">Home</font></a>
+  </section>
+
+  <section id="sec2">
+    <a href="word_page.html"><font color="white">Word</font></a>
+  </section>
+
+  <section id="sec3">
+      <a href="/survey"><font color="white">Your <br/> Thoughts</font></a>
+  </section>
+
+  <section id="sec4">
+  <a href="/login">Login</a>
+  </section>
+
+</div>
+<!--testing the scroll -->
+</body>
+</html>
