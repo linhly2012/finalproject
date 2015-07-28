@@ -49,11 +49,18 @@ class HomePageHandler(webapp2.RequestHandler):
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render())
 
+<<<<<<< HEAD
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/yourthoughts.html')
         self.response.write(entry.render())
 
+=======
+class NodeHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja2_environment.get_template('template/nodes.html')
+        self.response.write(template.render())
+>>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
 
 
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -61,5 +68,9 @@ jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.d
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/login', MainHandler),
+<<<<<<< HEAD
     ('/survey', SurveyHandler),
+=======
+    ('/nodes', NodeHandler)
+>>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
 ], debug=True)
