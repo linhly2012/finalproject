@@ -31,12 +31,11 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/loginpage.html')
         self.response.write(entry.render())
-
         user = users.get_current_user()
         if user:
-                greeting = ('Welcome, %s! (<a href= %s> sign out</a>)' % (user.nickname(),
-                users.create_logout_url('/')))
-                            #^ send user back toc the original page after they log out
+            greeting = ('Welcome, %s! (<a href= %s>Sign Out</a>)' % (user.nickname(),
+            users.create_logout_url('/')))
+                        #^ send user back to the original page after they log out
         else:
             greeting = ('<a href= "%s"> Sign in or Register </a>.' % users.create_login_url
             ('/'))
@@ -47,30 +46,23 @@ class MainHandler(webapp2.RequestHandler):
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/welcome.html')
-        self.response.write(entry.render())
+        self.response.write(entry.render(login_url=users.create_login_url('/login')))
 
-<<<<<<< HEAD
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
         entry = jinja2_environment.get_template('template/yourthoughts.html')
         self.response.write(entry.render())
 
-=======
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja2_environment.get_template('template/nodes.html')
         self.response.write(template.render())
->>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
-
 
 jinja2_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', HomePageHandler),
     ('/login', MainHandler),
-<<<<<<< HEAD
     ('/survey', SurveyHandler),
-=======
     ('/nodes', NodeHandler)
->>>>>>> c83d751b55db73df1c02d622aab71fc340853c45
 ], debug=True)
