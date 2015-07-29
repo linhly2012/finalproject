@@ -4,7 +4,20 @@
 
 }
 body{
+  margin: 0;
   font-family: 'Quicksand', sans-serif;
+  width = 100%;
+  height = "500px";
+}
+
+h1 {
+  position: absolute;
+  margin-left: auto;
+  top: 80%;
+}
+
+div.vis-network {
+  height = "500px";
 }
 
 /*scroll menu*/
