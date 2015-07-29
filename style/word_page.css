@@ -6,10 +6,18 @@
 body{
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  display:inline-grid;
+
 }
 
-div.vis-network {
-  height = "500px";
+.vis-network {
+  height: 500px;
+}
+
+#mynetwork{
+  position: absolute;
+  width: 80%;
+  height: 100%;
 }
 
 h1{   /*style for header 1. Display everything in line*/
