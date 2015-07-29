@@ -18,29 +18,21 @@ body{
 
 
 #mynetwork{
-<<<<<<< HEAD:style/wordpage.css
-  width: 80%;
-  height: 80%;
+  border: solid black 10px;
+  margin: 100px;
+  float: right;
+  height: 550px;
+  width: 1000px;
+}
+
+#first{
   float: right;
 }
-=======
 
-  border: solid black 10px;
-  margin: auto;
-  height: 500px;
-  width: 1000px;
-
->>>>>>> e0f298092b2b1b27e8fc0e20b6d79a0039786f35:style/word_page.css
-
-}
 /*form section style */
 #wordinsert{
-<<<<<<< HEAD:style/wordpage.css
   float: right;
   padding-right: 905px;
-=======
-  /*padding-right: 974px;*/
->>>>>>> e0f298092b2b1b27e8fc0e20b6d79a0039786f35:style/word_page.css
   font-size: 2em;
   color: red;
 }
