@@ -8,6 +8,7 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 
+<<<<<<< HEAD
 #submitButton {
   width: 210px;
   height: 210px;
@@ -30,11 +31,32 @@ body{
   width: 70%;
   height: 100%;
   overflow: auto;
+=======
+/*form section style */
+#wordinsert{
+  float: right;
+  padding-right: 974px;
+  font-size: 2em; 
 }
 
+/* style for the submit button*/
+#submitButton {
+  width: 85px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+>>>>>>> 671193a9a6426b4085890a1a82da35a9207ef7e7
+}
+
+#formnsidemenu{
+  background-image: url('wordbackground.jpg');
+  color: white;
+
+}
 h1{   /*style for header 1. Display everything in line*/
   display: inline-block;
 }
+
 
 #signout{   /*style the sign out function*/
   position: absolute;
@@ -90,7 +112,6 @@ h1{   /*style for header 1. Display everything in line*/
   float: right;
   padding-right: 5%;
 }
-
 
 a:link{
   text-decoration: none;
