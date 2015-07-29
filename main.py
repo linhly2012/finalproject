@@ -82,10 +82,13 @@ class UserDataHandler(webapp2.RequestHandler):
     def get(self):
         query = Survey.query()
         user_data = query.fetch()
+
+    
         template_vars = {'username':user_data}
         template = jinja_environment.get_template(
             'templates/yourthoughts.html')
         self.response.write(template.render(template_vars))
+
 
 #handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
