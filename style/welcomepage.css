@@ -14,7 +14,7 @@ h1{   /*style for header 1. Display everything in line*/
 #signout{   /*style the sign out function*/
   position: absolute;
   right: 60px;
-  color: white; 
+  color: white;
 }
 
 /*scroll menu*/
@@ -34,11 +34,15 @@ h1{   /*style for header 1. Display everything in line*/
 #scrollsec2 {
   background-color: rgba(192,192,192,0.3);
   overflow: auto;
+  padding-left:70px;
+  padding-right:70px;
 }
 
 #scrollsec3 {
   background-color: rgba(255,0,0,0.3);
   overflow: auto;
+  padding-left:70px;
+  padding-right: 70px;
 }
 
 
