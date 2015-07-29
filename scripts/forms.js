@@ -64,12 +64,12 @@ $(document).ready(function() {
 
     $('#submitButton').click(function() {
       var name = $('#first').val();
-      var name2 = $('#second').val();
+      //var name2 = $('#second').val();
       name = name.toUpperCase();
       $('#first').val(name);
-      $('#second').val(name2);
+      //$('#second').val(name2);
       myList.push(name);
-      myList.push(name2);
+      //myList.push(name2);
       createNodes(myList)
 
 
