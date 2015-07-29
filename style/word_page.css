@@ -6,8 +6,6 @@
 body{
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  width: 100%;
-  height: 500px;
 }
 
 #submitButton {
@@ -21,8 +19,10 @@ body{
 
 #mynetwork{
   position: absolute;
-  width: 100%;
+  padding-left: 15%;
+  width: 70%;
   height: 100%;
+  overflow: auto;
 }
 
 h1{   /*style for header 1. Display everything in line*/
