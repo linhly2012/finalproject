@@ -24,6 +24,40 @@
 <body>
   <header>
     <h1>  P E A R . <img src='style/pearicon.png' width=50px height=49px></h1>  <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
+  </header>  <div id="mynetwork"></div>
+  <script>
+    // document.getElementById({{name}}).innerHTML = "YES"
+
+  </script>
+
+
+  <form>
+    First Word
+    <input id = "first" type = "text" name = "first">
+    Second Word
+    <input id = "second" type = "text" name = "second">
+    <input id = "newWord" type = "text" name = "newWord">
+    <button id = "submitButton" type = "button" value = "Submit">
+    <button id = "submitButton2" type = "button" value = "New Word">
+
+  </form>
+
+  </div>
+
+
+<!--Side Bar Menu-->
+<div id="menu">
+  <section id="sec1">
+    <a href="/"><font color="white">Home</font></a>
+  </section>
+
+  <section id="sec2">
+    <a href="/nodes"><font color="white">Word</font></a>
+  </section>
+
+<!-- once user click on it, they should able go to your thoughts page-->
+  <section id="sec3">
+    <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
   </header>
 
 <!-- //    <script>
@@ -66,6 +100,7 @@
         <a href="{{ login_url }}" ><font color="white">Login</font></a>
       {% endif %}
     </section>
+
   </section>
 
 </div>

@@ -8,11 +8,33 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 
+#submitButton {
+  width: 210px;
+  height: 210px;
+
+
+.vis-network {
+  height: 500px;
+
+}
+
+#submitButton2 {
+  margin: auto;
+  width: 210px;
+  height: 210px;
+}
+
+#mynetwork{
+  position: absolute;
+  padding-left: 15%;
+  width: 70%;
+  height: 100%;
+  overflow: auto;
 /*form section style */
 #wordinsert{
   float: right;
   padding-right: 974px;
-  font-size: 2em; 
+  font-size: 2em;
 }
 
 /* style for the submit button*/

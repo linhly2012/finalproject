@@ -3,27 +3,38 @@ $(document).ready(function() {
 
     // var x = document.getElementById("mynetwork").value;
     // console.log(x);
+    myList = [];
+    function createNodes(list) {
+      tempNodes = [];
+      tempDicNodes = {};
+      for (i = 1; i <= list.length; i += 1) {
+        tempNodes.push({id: i, label: list[i-1]});
+      }
 
-    console.log("Working");
-    var nodes
-    $('#submitButton').click(function() {
-      var name = $('#first').val();
-      var name2 = $('#second').val();
-      name = name.toUpperCase();
-      $('#first').val(name);
-      $('#second').val(name2);
-      console.log(name.toUpperCase());
+      //nested for loops because there are multiple dictionaries inside of one list
 
-      var nodes = new vis.DataSet([
-          {id: 1, label: name},
-          {id: 2, label: name2}
-      ]);
+      console.log(tempDicNodes);
+      console.log(tempNodes);
+      var nodes = new vis.DataSet(tempNodes);
+      //     {id: 1, label: name},
+      //     {id: 2, label: name2}
+      // ]);
 
-      console.log(nodes);
+      tempEdges = [];
+      tempDicEdges = {};
+      for (i = 1; i < list.length; i += 1) {
+        tempEdges.push({from: i, to: i+1})
+        // tempDicEdges['from']=[i];
+        // tempDicEdges['to']=[i+1];
+      }
+
+      tempEdges.push(tempDicEdges);
+      console.log(tempEdges);
+      console.log(tempDicEdges);
       // create an array with edges
-      var edges = new vis.DataSet([
-          {from: 1, to: 2}
-      ]);
+      var edges = new vis.DataSet(tempEdges);
+      //     {from: 1, to: 2}
+      // ]);
 
 
       // create a network
@@ -38,44 +49,37 @@ $(document).ready(function() {
       //CSS properties of the nodes
       var options = {
         nodes: {
-          borderWidth: 5,
+          borderWidth: 3,
           shape: 'circle'
         },
       };
 
       // initialize your network!
       var network = new vis.Network(container, data, options);
-      console.log("Editing Network");
+      // container = document.getElementById('mynetwork');
 
-      jQuery('body').hover(function() {
-        //$('').clone({left:'0px'}, 1500, 'easeInElastic', function() {
-        // console.log("Adding node");
-        // nodes.push({id: 12, label : 'Node Test'})
-        // console.log(String(nodes));
-          var add = {
-            manipulation: {
-              addNode: function(nodeData,callback) {
-                nodeData.label = 'Create a new node';
-                callback(nodeData);
-              }
-            }
-          }
+
+
+    }
+
+    $('#submitButton').click(function() {
+      var name = $('#first').val();
+      var name2 = $('#second').val();
+      name = name.toUpperCase();
+      $('#first').val(name);
+      $('#second').val(name2);
+      myList.push(name);
+      myList.push(name2);
+      createNodes(myList)
+
+
+
+
           //getNodes.push({id : 12, label : "Test Node"})
           //edges.push({from: 8, to: 12})
-          console.log("Creating a node 2");
-
-          container = document.getElementById('mynetwork');
-
-          // provide the data in the vis format
-          data = {
-              nodes: nodes,
-              edges: edges
-          };
-          network.container = container;
-          network.data = data;
-          network.options = add;
 
         });
+
 
 
 
@@ -86,5 +90,5 @@ $(document).ready(function() {
 
 
 
-})
+
 // });
