@@ -147,3 +147,9 @@ a:link { /*take out the underline on the word that has embedded link under*/
   float: right;
   padding-top: 100px;
 }
+
+#uka {
+  width: 500px;
+  float: right;
+  padding-top: 100px;
+}
