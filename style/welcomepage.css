@@ -120,19 +120,23 @@ a:link { /*take out the underline on the word that has embedded link under*/
 /*bio pics*/
 
 .shrink img {
-  height: 400px;
-  width: 380px;
+  height: 390px;
+  width: 370px;
+  border-radius: 15px;
 
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
           transition: all 1s ease;
+
+
 }
 
 .shrink img:hover {
-  width: 300px;
-  height: 330px;
+  height: 420px;
+  width: 390px;
+
 }
 
 
@@ -143,6 +147,7 @@ a:link { /*take out the underline on the word that has embedded link under*/
   width: 500px;
   float: right;
   padding-top: 50px;
+  border-radius: 15px;
 }
 
 
@@ -150,10 +155,12 @@ a:link { /*take out the underline on the word that has embedded link under*/
   width: 500px;
   float: right;
   padding-top: 100px;
+  border-radius: 15px;
 }
 
 #uka {
   width: 500px;
   float: right;
   padding-top: 50px;
+  border-radius: 15px;
 }
