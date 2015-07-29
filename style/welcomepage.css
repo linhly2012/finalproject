@@ -121,7 +121,7 @@ a:link { /*take out the underline on the word that has embedded link under*/
 
 .shrink img {
   height: 400px;
-  width: 400px;
+  width: 380px;
 
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
@@ -136,9 +136,13 @@ a:link { /*take out the underline on the word that has embedded link under*/
 }
 
 
+
+
+
 #linh {
   width: 500px;
   float: right;
+  padding-top: 50px;
 }
 
 
@@ -151,5 +155,5 @@ a:link { /*take out the underline on the word that has embedded link under*/
 #uka {
   width: 500px;
   float: right;
-  padding-top: 100px;
+  padding-top: 50px;
 }
