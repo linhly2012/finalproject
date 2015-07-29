@@ -12,9 +12,16 @@ body{
   width: 210px;
   height: 210px;
 
+
 .vis-network {
   height: 500px;
 
+}
+
+#submitButton2 {
+  margin: auto;
+  width: 210px;
+  height: 210px;
 }
 
 #mynetwork{
