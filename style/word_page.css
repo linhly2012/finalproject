@@ -10,8 +10,8 @@ body{
 
 
 #submitButton {
-  width: 210px;
-  height: 210px;
+  width: 75px;
+  height: 75px;
 }
 
 /*.vis-network {
@@ -20,13 +20,12 @@ body{
 }*/
 
 
-/*#mynetwork{
-  position: absolute;
-  padding-left: 15%;
-  width: 70%;
-  height: 100%;
-  overflow: auto;
-}*/
+#mynetwork{
+  border: solid black 10px;
+  margin: auto;
+  height: 500px;
+  width: 1000px;
+}
 /*form section style */
 #wordinsert{
   margin: auto;
