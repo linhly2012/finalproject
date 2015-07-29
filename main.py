@@ -90,8 +90,6 @@ class UserDataHandler(webapp2.RequestHandler):
 #handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
-
-
         url = ("http://randomword.setgetgo.com/get.php")
         string = urllib2.urlopen(url).read()
         # json.loads(string)
