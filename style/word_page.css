@@ -6,12 +6,15 @@
 body{
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  /*display:inline-grid;*/
-
 }
+
+#submitButton {
+  width: 210px;
+  height: 210px;
 
 .vis-network {
   height: 500px;
+
 }
 
 #mynetwork{
