@@ -36,7 +36,7 @@ class User(ndb.Model):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user() #getting current user
-        useracc = users.create_logout_url('/') #variable for user to sign out
+        logging.info("signout_url %s " %useracc)
         template_vars={'signout_url' : useracc} #library to store all the variable
         entry = jinja2_environment.get_template('template/welcome.html')
         self.response.write(entry.render(template_vars))
@@ -46,9 +46,14 @@ class MainHandler(webapp2.RequestHandler):
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-        # entry_vars = {'login_url': login_url, 'user': user}
+        login_url = users.create_login_url('/')
+        useracc = users.create_logout_url('/') #variable for user to sign out
+
+        entry_vars = {'login_url': login_url, 'user': user, 'signout_url': useracc}
+
+        logging.info("User is %s" %user)
         entry = jinja2_environment.get_template('template/welcome.html')
-        self.response.write(entry.render(login_url=users.create_login_url('/login')))
+        self.response.write(entry.render(entry_vars))
 
 #allow user to take survey when they choose your thoughts
 class SurveyHandler(webapp2.RequestHandler):
@@ -85,8 +90,6 @@ class UserDataHandler(webapp2.RequestHandler):
 #handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
-
-
         url = ("http://randomword.setgetgo.com/get.php")
         string = urllib2.urlopen(url).read()
         # json.loads(string)

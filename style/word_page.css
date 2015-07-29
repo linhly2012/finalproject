@@ -10,51 +10,36 @@ body{
   height: 500px;
 }
 
-h1 {
-  position: absolute;
-  margin-left: auto;
-  top: 80%;
-}
 
-div.vis-network {
-  height: 500px;
-}
+
+
+
+
 
 #submitButton {
   width: 210px;
   height: 210px;
+
+.vis-network {
+  height: 500px;
+
+}
+
+#mynetwork{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+}
+
+h1{   /*style for header 1. Display everything in line*/
+  display: inline-block;
 }
 
 #signout{   /*style the sign out function*/
   position: absolute;
   right: 60px;
+  color: white;
 }
-/*scroll menu*/
-/*#scrollsections {
-    width: 85%;
-    height: 800px;
-    overflow: scroll;
-    float: right;
-}
-#scrollsec1 {
-  background-color: blue;
-  overflow: auto;
-
-}
-
-#scrollsec2 {
-  background-color: red;
-  overflow: auto;
-}
-
-#scrollsec3 {
-  background-color: green;
-  overflow: auto;
-}*/
-
-
-
-
 
 #sec1 {
   background-image: url('sec1pic.jpg');

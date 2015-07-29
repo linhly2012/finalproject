@@ -48,7 +48,11 @@
   </section>
 
   <section id="sec4">
-  <a href="/login"><font color="white">Login</font></a>
+    {% if user %}
+      hello, {{ user }}
+    {% else %}
+      <a href="{{ login_url }}" ><font color="white">Login</font></a>
+    {% endif %}
   </section>
 
 </div>
