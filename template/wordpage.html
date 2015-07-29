@@ -6,7 +6,7 @@
   <!-- CSS the font-->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <!-- CSS for the this html -->
-  <link rel="stylesheet" type="text/css" href="style/wordpage.css">
+  <link rel="stylesheet" type="text/css" href="style/word_page.css">
   <!-- // <script src="scripts/forms.js"></script> -->
   <!-- CSS for the vis libray -->
   <link type = "text/css" rel = "stylesheet" href = "style/vis.css">
@@ -25,7 +25,37 @@
   <header>
     <h1>  P E A R . <img src='style/pearicon.png' width=50px height=49px></h1>
     <h1 id='signout'><a href="{{ signout_url }}">Log Out</a></h1>
+
+    <h1>  P E A R . </h1>  <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
   </header>
+  <div id="menu">
+    <!-- <section id="sec1">
+      <a href="/"><font color="white">Home</font></a>
+    </section>
+
+    <section id="sec2">
+      <a href="/nodes"><font color="white">Word</font></a>
+    </section>
+
+    <section id="sec3">
+      <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
+    </section>
+
+    <section id="sec4">
+      {% if user %}
+        hello, {{ user }}
+      {% else %}
+        <a href="{{ login_url }}" ><font color="white">Login</font></a>
+      {% endif %}
+    </section> -->
+
+
+
+        <!--for user to insert words -->
+
+      <!-- user name should show on this page and no function will be add to log in-->
+
+
 <!--Side Bar Menu-->
 
 <!-- //    <script>
@@ -33,27 +63,40 @@
 // // </script> -->
 
   <section id='forminsidemenu'>
-    <div id="mynetwork"></div>
+
       <!--for user to insert words -->
-    <form id="wordinsert">
-        First Word<input id = "first" type = "text" name = "first"></input>
-        <br/>
-        <br/>
-        Second Word<input id = "second" type = "text" name = "second"></input>
-        <br/>
-        <br/>
-        New Word <input id = "newWord" type = "text" name = "newWord"></input>
-        <br/>
-        <br/>
-        <button id = "submitButton" type = "button" value = "Submit"> Submit </button>
 
-        <!-- <button id = "submitButton2" type = "button" value = "New Word"> -->
-    </form>
+      <form id="wordinsert">
+          First Word<input id = "first" type = "text" name = "first"></input>
+          <br/>
 
 
+          <br/>
+          <button id = "submitButton" type = "button" value = "Submit"> Submit </button>
+
+          <!-- <button id = "submitButton2" type = "button" value = "New Word"> -->
+      </form>
+
+      <div id="mynetwork"></div>
     <!--Side Bar Menu-->
     {% include "template/sidebar.html" %}
+</section>
 
-  </section>
+
+
+  <!-- Node insertion right here -->
+
+
+
+
+  </div>
+
+
+<!--Side Bar Menu-->
+
+
+    <!-- user name should show on this page and no function will be add to log in-->
+ </section>
+
 </body>
 </html>

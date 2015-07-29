@@ -52,10 +52,18 @@ $(document).ready(function() {
           borderWidth: 3,
           shape: 'circle'
         },
+        autoResize: false,
+
+
+
+        // interaction: {
+        //   navigationButtons: true
+        // }
       };
 
       // initialize your network!
       var network = new vis.Network(container, data, options);
+      network.setSize('100%', '100%');
       // container = document.getElementById('mynetwork');
 
 
@@ -64,31 +72,19 @@ $(document).ready(function() {
 
     $('#submitButton').click(function() {
       var name = $('#first').val();
-      var name2 = $('#second').val();
+      //var name2 = $('#second').val();
       name = name.toUpperCase();
-      $('#first').val(name);
-      $('#second').val(name2);
+      $('#first').val('');
+      //$('#second').val(name2);
       myList.push(name);
-      myList.push(name2);
+
+      $("#first").focus();
+      window.location.hash = '#mynetwork';
+      //$('submitButton').focus();
+
+      //myList.push(name2);
       createNodes(myList)
-
-
-
-
-          //getNodes.push({id : 12, label : "Test Node"})
-          //edges.push({from: 8, to: 12})
 
         });
 
-
-
-
-
     })
-
-
-
-
-
-
-// });
