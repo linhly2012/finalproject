@@ -3,7 +3,9 @@
   overflow-x: auto;
 
 }
+
 body{  /*style the font for body*/
+  margin: 0;
   font-family: 'Quicksand', sans-serif;
 }
 

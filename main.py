@@ -94,7 +94,8 @@ class NodeHandler(webapp2.RequestHandler):
 
         url = ("http://randomword.setgetgo.com/get.php")
         string = urllib2.urlopen(url).read()
-        # json.loads(string) returns a dictionary
+        # json.loads(string)
+        # returns a dictionary
         logging.info(">>>>>>>>>>" + string)
         word = string
         #bigdictionary = string
@@ -107,7 +108,7 @@ class NodeHandler(webapp2.RequestHandler):
         # temp.put()
 
         template_vars = {'word' : word}
-        template = jinja2_environment.get_template('template/nodes.html')
+        template = jinja2_environment.get_template('template/wordpage.html')
         self.response.write(template.render(template_vars))
 
 
