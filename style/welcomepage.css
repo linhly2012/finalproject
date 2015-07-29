@@ -112,3 +112,55 @@ h1{   /*style for header 1. Display everything in line*/
 a:link { /*take out the underline on the word that has embedded link under*/
   text-decoration: none;
 }
+
+
+
+
+
+/*bio pics*/
+
+.shrink img {
+  height: 390px;
+  width: 370px;
+  border-radius: 15px;
+
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+
+
+}
+
+.shrink img:hover {
+  height: 420px;
+  width: 390px;
+
+}
+
+
+
+
+
+#linh {
+  width: 500px;
+  float: right;
+  padding-top: 50px;
+  border-radius: 15px;
+}
+
+
+#steven {
+  width: 500px;
+  float: right;
+  padding-top: 100px;
+  border-radius: 15px;
+}
+
+#uka {
+  width: 500px;
+  float: right;
+  padding-top: 50px;
+  border-radius: 15px;
+}

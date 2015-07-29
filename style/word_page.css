@@ -9,45 +9,41 @@ body{
 }
 
 
+
 #submitButton {
   width: 75px;
   height: 75px;
 }
 
-/*.vis-network {
-  height: 500px;
-
-}*/
 
 
 #mynetwork{
+
   border: solid black 10px;
   margin: auto;
   height: 500px;
   width: 1000px;
+
+
 }
 /*form section style */
 #wordinsert{
-  margin: auto;
-  text-align: center;
   /*padding-right: 974px;*/
   font-size: 2em;
 }
 
 /* style for the submit button*/
-/*#submitButton {
+#submitButton {
   width: 85px;
   height: 30px;
   border-radius: 10px;
   background-color: white;
 
-}*/
+}
 
 #formnsidemenu{
   background-image: url('wordbackground.jpg');
   color: white;
-  float: left;
-
 }
 h1{   /*style for header 1. Display everything in line*/
   display: inline-block;
