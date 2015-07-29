@@ -58,9 +58,15 @@ class HomePageHandler(webapp2.RequestHandler):
 #allow user to take survey when they choose your thoughts
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
-        # self.response.write('hello world')
-        template = jinja2_environment.get_template("template/yourthoughts.html")
-        self.response.write(template.render())
+        user = users.get_current_user()
+        username = self.request.get('username')
+        login_url = users.create_login_url('/')
+        useracc = users.create_logout_url('/')
+        template_vars={'username' : username,
+                    'login_url': login_url,
+                     'user': user, 'signout_url': useracc}
+        entry = jinja2_environment.get_template('template/yourthoughts.html')
+        self.response.write(entry.render(template_vars))
 
 
     def post(self):
@@ -73,7 +79,9 @@ class SurveyHandler(webapp2.RequestHandler):
         username1.put()
         # self.response.write('<a href=/add_name>Record User</a>')
 
-        template_vars={'username' : username}
+        template_vars={'username' : username,
+                    'login_url': login_url,
+                     'user': user, 'signout_url': useracc}
         entry = jinja2_environment.get_template('template/yourthoughts.html')
         self.response.write(entry.render(template_vars))
 
@@ -83,8 +91,9 @@ class UserDataHandler(webapp2.RequestHandler):
         query = Survey.query()
         user_data = query.fetch()
 
-    
-        template_vars = {'username':user_data}
+
+        template_vars = {'username':user_data, 'login_url': login_url,
+         'user': user, 'signout_url': useracc}
         template = jinja_environment.get_template(
             'templates/yourthoughts.html')
         self.response.write(template.render(template_vars))
@@ -93,6 +102,10 @@ class UserDataHandler(webapp2.RequestHandler):
 #handler for the bubble map
 class NodeHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
+        username = self.request.get('username')
+        login_url = users.create_login_url('/')
+        useracc = users.create_logout_url('/')
         url = ("http://randomword.setgetgo.com/get.php")
         string = urllib2.urlopen(url).read()
         # json.loads(string)
@@ -108,7 +121,9 @@ class NodeHandler(webapp2.RequestHandler):
         #     latitude = float(lat), longitude = float(lon))
         # temp.put()
 
-        template_vars = {'word' : word}
+        template_vars={'username' : username,
+                    'login_url': login_url,'word' : word,
+                     'user': user, 'signout_url': useracc}
         template = jinja2_environment.get_template('template/wordpage.html')
         self.response.write(template.render(template_vars))
 

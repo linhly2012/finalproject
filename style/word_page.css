@@ -9,22 +9,35 @@ body{
 }
 
 
-.vis-network {
-  height: 500px;
 
+#submitButton {
+  width: 75px;
+  height: 75px;
 }
+
+
 
 #mynetwork{
-  position: absolute;
-  padding-left: 15%;
-  width: 70%;
-  height: 100%;
-  overflow: auto;
+  border: solid black 10px;
+  margin: 100px;
+  float: right;
+  height: 550px;
+  width: 850px;
+
 }
+
+#first{
+  float: right;
+}
+
 /*form section style */
 #wordinsert{
-  /*padding-right: 974px;*/
+  float: right;
+  padding-right: 800px;
   font-size: 2em;
+  color: red;
+
+
 }
 
 /* style for the submit button*/
@@ -48,7 +61,7 @@ h1{   /*style for header 1. Display everything in line*/
 #signout{   /*style the sign out function*/
   position: absolute;
   right: 60px;
-  color: white;
+  color: blue;
 }
 
 #sec1 {
