@@ -24,7 +24,7 @@
 <body>
   <header>
 
-    <h1>  P E A R . </h1>  <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
+    <h1>  P E A R .  <img src='style/pearicon.png' width=50px height=49px></h1>  <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
   </header>
   <div id="menu">
 
@@ -34,7 +34,9 @@
       <!--for user to insert words -->
 
       <form id="wordinsert">
-          First Word<input id = "first" type = "text" name = "first"></input>
+          <br/>
+          <font color="white">First Word:
+            <input id = "first" type = "text" name = "first" value={{ word }}></input></font>
           <br/>
 
 
