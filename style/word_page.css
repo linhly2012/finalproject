@@ -24,15 +24,15 @@ body{
 #mynetwork{
   width: 80%;
   height: 80%;
-
   float: right;
 }
 
 /*form section style */
 #wordinsert{
   float: right;
-  padding-right: 974px;
+  padding-right: 905px;
   font-size: 2em;
+  color: red; 
 }
 
 #forminsidemenu{
@@ -47,7 +47,7 @@ h1{   /*style for header 1. Display everything in line*/
 #signout{   /*style the sign out function*/
   position: absolute;
   right: 60px;
-  color: white;
+  color: blue;
 }
 
 #sec1 {
