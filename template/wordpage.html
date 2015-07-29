@@ -6,7 +6,7 @@
   <!-- CSS the font-->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <!-- CSS for the this html -->
-  <link rel="stylesheet" type="text/css" href="style/word_page.css">
+  <link rel="stylesheet" type="text/css" href="style/wordpage.css">
   <!-- // <script src="scripts/forms.js"></script> -->
   <!-- CSS for the vis libray -->
   <link type = "text/css" rel = "stylesheet" href = "style/vis.css">
@@ -52,29 +52,8 @@
 
 
     <!--Side Bar Menu-->
-    <div id="menu">
-      <section id="sec1">
-        <a href="/"><font color="white">Home</font></a>
-      </section>
+    {% include "template/sidebar.html" %}
 
-      <section id="sec2">
-        <a href="/nodes"><font color="white">Word</font></a>
-      </section>
-
-    <!-- once user click on it, they should able go to your thoughts page-->
-      <section id="sec3">
-        <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
-      </section>
-
-    <!-- user name should show on this page and no function will be add to log in-->
-    <section id="sec4">
-      {% if user %}
-        hello, {{ user }}
-      {% else %}
-        <a href="{{ login_url }}" ><font color="white">Login</font></a>
-      {% endif %}
-    </section>
-  </div>
   </section>
 </body>
 </html>
