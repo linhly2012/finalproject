@@ -20,6 +20,10 @@ div.vis-network {
   height = "500px";
 }
 
+#signout{   /*style the sign out function*/
+  position: absolute;
+  right: 60px;
+}
 /*scroll menu*/
 /*#scrollsections {
     width: 85%;
@@ -94,4 +98,9 @@ div.vis-network {
   overflow: scroll;
   float: right;
   padding-right: 5%;
+}
+
+
+a:link{
+  text-decoration: none;
 }

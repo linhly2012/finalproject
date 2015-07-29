@@ -90,7 +90,7 @@ body{
 }
 
 #survey {
-  background-image: url('yourthoughtspic.jpg');
+  background-image: url('yourthoughtsedited.jpg');
   width: 85%;
   height: 800px;
   overflow: scroll;
@@ -113,6 +113,18 @@ body{
   text-align: center;
   color: white;
 }
-/*a:link {
-    color: #FF0000;
-}*/
+
+h1{   /*style for header 1. Display everything in line*/
+  display: inline-block;
+}
+
+#signout{   /*style the sign out function*/
+  position: absolute;
+  right: 60px;
+  top: 0px;
+  color: white;
+}
+
+a:link{ /*take out the underline on the word that has embedded link under*/
+  text-decoration: none;
+}

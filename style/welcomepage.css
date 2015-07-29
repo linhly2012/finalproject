@@ -1,11 +1,22 @@
-#title {
+#title { /*title style*/
   font-family: 'Quicksand', sans-serif;
   overflow-x: auto;
 
 }
-body{
+
+body{  /*style the font for body*/
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+}
+
+h1{   /*style for header 1. Display everything in line*/
+  display: inline-block;
+}
+
+#signout{   /*style the sign out function*/
+  position: absolute;
+  right: 60px;
+  color: white;
 }
 
 /*scroll menu*/
@@ -25,11 +36,15 @@ body{
 #scrollsec2 {
   background-color: rgba(192,192,192,0.3);
   overflow: auto;
+  padding-left:70px;
+  padding-right:70px;
 }
 
 #scrollsec3 {
   background-color: rgba(255,0,0,0.3);
   overflow: auto;
+  padding-left:70px;
+  padding-right: 70px;
 }
 
 
@@ -90,7 +105,10 @@ body{
   padding-right: 5%;
 }
 
+#submit2{
+  float: right;
+}
 
-/*a:link {
-    color: #FF0000;
-}*/
+a:link { /*take out the underline on the word that has embedded link under*/
+  text-decoration: none;
+}
