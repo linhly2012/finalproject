@@ -25,86 +25,76 @@
   <header>
     <h1>  P E A R . </h1>  <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
 
-  </header>  <div id="mynetwork"></div>
+  </header>
+  <div id="menu">
+    <section id="sec1">
+      <a href="/"><font color="white">Home</font></a>
+    </section>
+
+    <section id="sec2">
+      <a href="/nodes"><font color="white">Word</font></a>
+    </section>
+
+  <!-- once user click on it, they should able go to your thoughts page-->
+    <section id="sec3">
+      <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
+
+    </header>
+
+  <!-- //    <script>
+  //     document.getElementById({{name}}).innerHTML = "YES"
+  // // </script> -->
+
+    <section id='formnsidemenu'>
+        <!--for user to insert words -->
+
+
+      <!--Side Bar Menu-->
+      <!-- <div id="menu">
+        <section id="sec1">
+          <a href="/"><font color="white">Home</font></a>
+        </section>
+
+        <section id="sec2">
+          <a href="/nodes"><font color="white">Word</font></a>
+        </section>
+
+       once user click on it, they should able go to your thoughts page-->
+        <!-- <section id="sec3">
+          <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
+        </section> --> -->
+
+      <!-- user name should show on this page and no function will be add to log in-->
+      <section id="sec4">
+        {% if user %}
+          hello, {{ user }}
+        {% else %}
+          <a href="{{ login_url }}" ><font color="white">Login</font></a>
+        {% endif %}
+      </section>
+
+    </section>
+
+  </div>
+  <div id="mynetwork"></div>
   <script>
     // document.getElementById({{name}}).innerHTML = "YES"
 
   </script>
 
-
-  <form>
+  <form id="wordinsert" width = 500px>
+    <br/>
     First Word
     <input id = "first" type = "text" name = "first">
-    Second Word
-    <input id = "second" type = "text" name = "second">
-    <input id = "newWord" type = "text" name = "newWord">
-    <button id = "submitButton" type = "button" value = "Submit">
-    <button id = "submitButton2" type = "button" value = "New Word">
-
+    <br/>
+    <button id = "submitButton" type = "button" value = "Submit"></button>
   </form>
+
 
   </div>
 
 
 <!--Side Bar Menu-->
-<div id="menu">
-  <section id="sec1">
-    <a href="/"><font color="white">Home</font></a>
-  </section>
 
-  <section id="sec2">
-    <a href="/nodes"><font color="white">Word</font></a>
-  </section>
-
-<!-- once user click on it, they should able go to your thoughts page-->
-  <section id="sec3">
-    <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
-
-  </header>
-
-<!-- //    <script>
-//     document.getElementById({{name}}).innerHTML = "YES"
-// // </script> -->
-
-  <section id='formnsidemenu'>
-      <!--for user to insert words -->
-      <form id="wordinsert">
-        <br/>
-        First Word <input id = "first" type = "text" name = "first"></input>
-        <br/>
-        <br/>
-        Second Word<input id = "second" type = "text" name = "second"> </input>
-        <br/>
-        <br/>
-        <button id = "submitButton" type ="sumbit" value = "Submit"> Submit </button>
-      </form>
-
-    <!--Side Bar Menu-->
-    <div id="menu">
-      <section id="sec1">
-        <a href="/"><font color="white">Home</font></a>
-      </section>
-
-      <section id="sec2">
-        <a href="/nodes"><font color="white">Word</font></a>
-      </section>
-
-    <!-- once user click on it, they should able go to your thoughts page-->
-      <section id="sec3">
-        <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
-      </section>
-
-    <!-- user name should show on this page and no function will be add to log in-->
-    <section id="sec4">
-      {% if user %}
-        hello, {{ user }}
-      {% else %}
-        <a href="{{ login_url }}" ><font color="white">Login</font></a>
-      {% endif %}
-    </section>
-
-  </section>
-
-</div>
 </body>
 </html>

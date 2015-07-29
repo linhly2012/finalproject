@@ -8,49 +8,47 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 
-<<<<<<< HEAD
+
 #submitButton {
   width: 210px;
   height: 210px;
+}
 
-
-.vis-network {
+/*.vis-network {
   height: 500px;
 
-}
+}*/
 
-#submitButton2 {
-  margin: auto;
-  width: 210px;
-  height: 210px;
-}
 
-#mynetwork{
+/*#mynetwork{
   position: absolute;
   padding-left: 15%;
   width: 70%;
   height: 100%;
   overflow: auto;
-=======
+}*/
 /*form section style */
 #wordinsert{
-  float: right;
-  padding-right: 974px;
-  font-size: 2em; 
+  margin: auto;
+  text-align: center;
+  padding-left: 40%;
+  /*padding-right: 974px;*/
+  font-size: 2em;
 }
 
 /* style for the submit button*/
-#submitButton {
+/*#submitButton {
   width: 85px;
   height: 30px;
   border-radius: 10px;
   background-color: white;
->>>>>>> 671193a9a6426b4085890a1a82da35a9207ef7e7
-}
+
+}*/
 
 #formnsidemenu{
   background-image: url('wordbackground.jpg');
   color: white;
+  float: left;
 
 }
 h1{   /*style for header 1. Display everything in line*/
