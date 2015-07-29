@@ -101,29 +101,9 @@ I’m absolutely excited to meet all of incredibly talented people this summer :
 
 
   </div>
-
+  {% include "template/sidebar.html" %}
 <!--Scroll Bar Menu for the home, log in, your thoughts and word page-->
-  <div id="menu">
-    <section id="sec1">
-      <a href="/"><font color="white">Home</font></a>
-    </section>
 
-    <section id="sec2">
-      <a href="/nodes"><font color="white">Word</font></a>
-    </section>
-
-    <section id="sec3">
-      <a href="/survey"><font color="white">Your <br/> Thoughts </a>
-    </section>
-
-    <section id="sec4">
-      {% if user %}
-        hello, {{ user }}
-      {% else %}
-        <a href="{{ login_url }}" ><font color="white">Login</font></a>
-      {% endif %}
-    </section>
-  </div>
 
 
 
