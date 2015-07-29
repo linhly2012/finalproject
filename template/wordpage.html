@@ -39,43 +39,23 @@
   <!-- once user click on it, they should able go to your thoughts page-->
     <section id="sec3">
       <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
+    </section>
 
-    </header>
+    <section id="sec4">
+      {% if user %}
+        hello, {{ user }}
+      {% else %}
+        <a href="{{ login_url }}" ><font color="white">Login</font></a>
+      {% endif %}
+    </section>
 
-  <!-- //    <script>
-  //     document.getElementById({{name}}).innerHTML = "YES"
-  // // </script> -->
 
-    <section id='formnsidemenu'>
+
         <!--for user to insert words -->
 
-
-      <!--Side Bar Menu-->
-      <!-- <div id="menu">
-        <section id="sec1">
-          <a href="/"><font color="white">Home</font></a>
-        </section>
-
-        <section id="sec2">
-          <a href="/nodes"><font color="white">Word</font></a>
-        </section>
-
-       once user click on it, they should able go to your thoughts page-->
-        <!-- <section id="sec3">
-          <h6><a href="/survey"><font color="white">Your <br/> Thoughts</font></a></h6>
-        </section> --> -->
-
       <!-- user name should show on this page and no function will be add to log in-->
-      <section id="sec4">
-        {% if user %}
-          hello, {{ user }}
-        {% else %}
-          <a href="{{ login_url }}" ><font color="white">Login</font></a>
-        {% endif %}
 
-    <h1>  P E A R . <img src='style/pearicon.png' width=50px height=49px></h1>
-    <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
-  </header>
+
 <!--Side Bar Menu-->
 
 <!-- //    <script>
@@ -88,12 +68,8 @@
       <form id="wordinsert">
           First Word<input id = "first" type = "text" name = "first"></input>
           <br/>
-          <br/>
-          Second Word<input id = "second" type = "text" name = "second"></input>
-          <br/>
-          <br/>
-          New Word <input id = "newWord" type = "text" name = "newWord"></input>
-          <br/>
+
+
           <br/>
           <button id = "submitButton" type = "button" value = "Submit"> Submit </button>
 
@@ -102,29 +78,14 @@
 
 
     <!--Side Bar Menu-->
-    <div id="menu">
-      <section id="sec1">
-        <a href="/"><font color="white">Home</font></a>
 
-      </section>
-
-    </section>
-
-  </div>
-  <div id="mynetwork"></div>
-  <script>
-    // document.getElementById({{name}}).innerHTML = "YES"
+</section>
 
 
-  </script>
 
-  <form id="wordinsert" width = 500px>
-    <br/>
-    First Word
-    <input id = "first" type = "text" name = "first">
-    <br/>
-    <button id = "submitButton" type = "button" value = "Submit"></button>
-  </form>
+  <!-- Node insertion right here -->
+
+
 
 
   </div>
@@ -134,14 +95,7 @@
 
 
     <!-- user name should show on this page and no function will be add to log in-->
-    <section id="sec4">
-      {% if user %}
-        hello, {{ user }}
-      {% else %}
-        <a href="{{ login_url }}" ><font color="white">Login</font></a>
-      {% endif %}
-    </section>
-  </div>
+
   </section>
 
 </body>
