@@ -14,12 +14,14 @@ body{
 }
 
 #mynetwork{
-  border: solid white 10px;
-  margin: 100px;
-  float: right;
-
-  height: 550px;
-  width: 850px;
+  border: solid white 5px;
+  margin-left: 320px;
+  margin-top: 200px;
+  /*float: right;*/
+  position: absolute;
+  height:  50%;
+  width: 60%;
+  /*resize: auto;*/
 }
 
 #first{
@@ -34,11 +36,10 @@ body{
 
 /*form section style */
 #wordinsert{
-  float: right;
-  padding-right: 800px;
-  font-size: 2em;
-  color: red;
-
+  position: absolute;
+  padding-left: 300px;
+  /*float: right;*/
+  /*padding-right: 905px;*/
 
 }
 
