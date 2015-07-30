@@ -78,7 +78,9 @@ class SurveyHandler(webapp2.RequestHandler):
 
         username1.put()
         # self.response.write('<a href=/add_name>Record User</a>')
-
+        user = users.get_current_user()
+        login_url = users.create_login_url('/')
+        useracc = users.create_logout_url('/')
         template_vars={'username' : username,
                     'login_url': login_url,
                      'user': user, 'signout_url': useracc}
