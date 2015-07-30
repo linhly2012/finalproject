@@ -64,6 +64,7 @@ $(document).ready(function() {
       // initialize your network!
       var network = new vis.Network(container, data, options);
       network.setSize('100%', '100%');
+      network.navigationButtons = true;
       // container = document.getElementById('mynetwork');
 
 
