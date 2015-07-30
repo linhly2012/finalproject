@@ -32,6 +32,14 @@ class User(ndb.Model):
         created_date = ndb.DateTimeProperty(required=True)
 
 
+# word page datastore attempt
+class WordPageUser(ndb.Model):
+        word = ndb.StringProperty(required=True)
+        created_date = ndb.DateTimeProperty(required=True)
+
+
+
+
 #allow user to go to do log out in a more convenient way
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -78,7 +86,9 @@ class SurveyHandler(webapp2.RequestHandler):
 
         username1.put()
         # self.response.write('<a href=/add_name>Record User</a>')
-
+        user = users.get_current_user()
+        login_url = users.create_login_url('/')
+        useracc = users.create_logout_url('/')
         template_vars={'username' : username,
                     'login_url': login_url,
                      'user': user, 'signout_url': useracc}
@@ -90,6 +100,20 @@ class UserDataHandler(webapp2.RequestHandler):
     def get(self):
         query = Survey.query()
         user_data = query.fetch()
+
+
+        template_vars = {'username':user_data, 'login_url': login_url,
+         'user': user, 'signout_url': useracc}
+        template = jinja_environment.get_template(
+            'templates/yourthoughts.html')
+        self.response.write(template.render(template_vars))
+
+#handler for datastore
+
+class WordDataHandler(webapp2.RequestHandler):
+    def get(self):
+        query = Survey.query()
+        word_data = query.fetch()
 
 
         template_vars = {'username':user_data, 'login_url': login_url,
@@ -120,6 +144,17 @@ class NodeHandler(webapp2.RequestHandler):
         # temp = Temperature(temperature = int(howhot), created = datetime.datetime.now(),
         #     latitude = float(lat), longitude = float(lon))
         # temp.put()
+
+        # def post(self):
+        #     username = self.request.get('username')
+        #     current_date = datetime.datetime.now()
+        #     username1 = WordPageUser (word=word)
+        #     username1.created_date = current_date
+        #
+        #     username1.put()
+
+
+
 
         template_vars={'username' : username,
                     'login_url': login_url,'word' : word,

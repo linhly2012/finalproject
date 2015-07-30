@@ -9,6 +9,9 @@ body{  /*style the font for body*/
   font-family: 'Quicksand', sans-serif;
 }
 
+
+
+
 h1{   /*style for header 1. Display everything in line*/
   display: inline-block;
 }
@@ -18,6 +21,10 @@ h1{   /*style for header 1. Display everything in line*/
   right: 60px;
   color: white;
 }
+
+
+
+
 
 /*scroll menu*/
 #scrollsections {
@@ -141,7 +148,7 @@ a:link { /*take out the underline on the word that has embedded link under*/
 
 
 
-
+/*bios*/
 
 #linh {
   width: 500px;

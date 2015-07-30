@@ -13,12 +13,33 @@ body{
   height: 75px;
 }
 
+/*refresh button*/
+
+#refresh {
+  margin-left: 450px;
+  margin-top: 57px;
+
+
+  width: 85px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+
+  position: absolute;
+
+
+}
+
+
 #mynetwork{
-  border: solid white 10px;
-  margin: 100px;
-  float: right;
-  height: 500px;
-  width: 1000px;
+  border: solid white 5px;
+  margin-left: 320px;
+  margin-top: 180px;
+  /*float: right;*/
+  position: absolute;
+  height:  70%;
+  width: 60%;
+  /*resize: auto;*/
 }
 
 #first{
@@ -33,10 +54,11 @@ body{
 
 /*form section style */
 #wordinsert{
-  float: right;
-  padding-right: 905px;
-  font-size: 2em;
-  color: red;
+  position: absolute;
+  padding-left: 300px;
+  /*float: right;*/
+  /*padding-right: 905px;*/
+
 }
 
 /* style for the submit button*/
@@ -45,6 +67,7 @@ body{
   height: 30px;
   border-radius: 10px;
   background-color: white;
+  margin-left: 60px;
 
 }
 
