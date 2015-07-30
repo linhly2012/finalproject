@@ -32,13 +32,14 @@ body{
 
 
 #mynetwork{
-  border: solid white 5px;
-  margin-left: 320px;
-  margin-top: 180px;
+  /*border: solid white 5px;*/
+  margin-left: 240px;
+  margin-top: 88px;
   /*float: right;*/
   position: absolute;
-  height:  70%;
-  width: 60%;
+  height: 80%;
+  width: 85%;
+
   /*resize: auto;*/
 }
 
