@@ -16,7 +16,8 @@
 <body>
   <!-- Divided out another head in body for the log out purpose-->
   <header>
-    <h1>  P E A R . <img src='style/pearicon.png' width=50px height=49px></h1>  <h1 id='signout'><a href="{{ signout_url }}">Log Out</a></h1>
+    <h1> <a href="/"><font color="black"> P E A R . <img src='style/pearicon.png' width=50px height=49px></font></a></h1>
+     <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
   </header>
 
   <form id="survey"action="/survey" method="POST">
@@ -24,7 +25,7 @@
     <br/>
     <br/>
     <div><font color="white">What is your name?</font> <br/><input type="text" name="username"/></div>
-    <div><font color="white">Did you reach your brainstorming goal? </font><br/><input type="text" name="useful"/></div>
+    <div><font color="white">What do you think of the app?</font><br/><input type="text" name="useful"/></div>
     <div><input type="submit" value="Submit"/>
       <div id="thank">
         {% if username %}
