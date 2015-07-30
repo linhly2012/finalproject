@@ -145,13 +145,13 @@ class NodeHandler(webapp2.RequestHandler):
         #     latitude = float(lat), longitude = float(lon))
         # temp.put()
 
-        def post(self):
-            username = self.request.get('username')
-            current_date = datetime.datetime.now()
-            username1 = WordPageUser (word=word)
-            username1.created_date = current_date
-
-            username1.put()
+        # def post(self):
+        #     username = self.request.get('username')
+        #     current_date = datetime.datetime.now()
+        #     username1 = WordPageUser (word=word)
+        #     username1.created_date = current_date
+        #
+        #     username1.put()
 
 
 

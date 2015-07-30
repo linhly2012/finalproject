@@ -27,7 +27,11 @@
     <h1> <a href="/"><font color="black"> P E A R . <img src='style/pearicon.png' width=50px height=49px></font></a></h1>
      <h1 id='signout'><a href="{{ signout_url }}"><font color="black">Log Out</font></a></h1>
   </header>
+
+
+
   <div id="menu">
+
 
 
   <section id='forminsidemenu'>
@@ -45,12 +49,31 @@
           <br/>
           <button id = "submitButton" type = "button" value = "Submit"> Submit </button>
 
+
+
           <!-- <button id = "submitButton2" type = "button" value = "New Word"> -->
       </form>
+      <!-- refresh button        -->
+                      <div>
+                        <button id="refresh"onclick="myFunction()">Clear</button>
+
+                       <script>
+                       function myFunction() {
+                           location.reload();
+                       }
+                       </script>
+                     </div>
+
+
       <!-- Node insertion right here -->
+
+
       <div id="mynetwork"></div>
+
     <!--Side Bar Menu-->
     {% include "template/sidebar.html" %}
+
+
 </section>
   </div>
 
@@ -58,6 +81,11 @@
 
     <!-- user name should show on this page and no function will be add to log in-->
  </section>
+
+
+ <!-- refresh button -->
+
+
 
 </body>
 </html>

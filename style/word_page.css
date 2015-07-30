@@ -13,6 +13,22 @@ body{
   height: 75px;
 }
 
+/*refresh button*/
+
+#refresh {
+  margin-left: 450px;
+  margin-top: 57px;
+
+
+  width: 85px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+
+
+}
+
+
 #mynetwork{
   border: solid white 5px;
   margin-left: 320px;
@@ -49,6 +65,7 @@ body{
   height: 30px;
   border-radius: 10px;
   background-color: white;
+  margin-left: 60px;
 
 }
 
