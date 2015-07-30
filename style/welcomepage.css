@@ -9,6 +9,9 @@ body{  /*style the font for body*/
   font-family: 'Quicksand', sans-serif;
 }
 
+
+
+
 h1{   /*style for header 1. Display everything in line*/
   display: inline-block;
 }
