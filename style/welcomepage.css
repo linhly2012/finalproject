@@ -19,6 +19,10 @@ h1{   /*style for header 1. Display everything in line*/
   color: white;
 }
 
+
+
+
+
 /*scroll menu*/
 #scrollsections {
     width: 85%;
@@ -141,7 +145,7 @@ a:link { /*take out the underline on the word that has embedded link under*/
 
 
 
-
+/*bios*/
 
 #linh {
   width: 500px;
